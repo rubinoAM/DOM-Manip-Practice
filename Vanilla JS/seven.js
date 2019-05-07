@@ -10,25 +10,13 @@ document.addEventListener('DOMContentLoaded',()=>{
 function makeTable(table,rows,columns){
     while(table.lastChild){ table.removeChild(table.lastChild); } //Resets table
     table.border = 4;
-    let newRows = [];
-    let newCells = [];
-    for(let i=0;i<columns;i++){
-        newCells.push(document.createElement('td'));
-        newCells[i].innerHTML = "[Blank]";
-    }
-    for(let j=0;j<rows;j++){
-        newRows.push(document.createElement('tr'));
-    }
-    for(let k=0;k<newRows.length;k++){
-        for(let l=0;l<newCells.length;l++){
-            console.log(k,newCells[l]);
-            newRows[k].appendChild(newCells[l]);
-            console.dir(newRows[k]);
+    for(let i=0;i<rows;i++){
+        let newRow = document.createElement('tr');
+        for(let j=0;j<columns;j++){
+            let newCell = document.createElement('td');
+            newCell.innerHTML = "[BLANK]";
+            newRow.appendChild(newCell);
         }
+        table.appendChild(newRow);
     }
-    console.log(newRows);
-    for(let m=0;m<newRows.length;m++){
-        table.appendChild(newRows[m]);
-    }
-    console.dir(table);
 }
