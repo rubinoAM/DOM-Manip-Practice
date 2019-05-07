@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded',()=>{
 function makeTable(table,rows,columns){
     while(table.lastChild){ table.removeChild(table.lastChild); } //Resets table
     table.border = 4;
-    for(let i=0;i<rows;i++){
+    for(let i=0;i<rows;i++){ //Makes a new row
         let newRow = document.createElement('tr');
-        for(let j=0;j<columns;j++){
+        for(let j=0;j<columns;j++){ //Fills each new row with the needed number of cells
             let newCell = document.createElement('td');
             newCell.innerHTML = "[BLANK]";
             newRow.appendChild(newCell);
