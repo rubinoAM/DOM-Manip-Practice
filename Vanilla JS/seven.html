@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vanilla JS- Exercise Seven</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="seven.js"></script>
+    <style>
+        #createTblForm{
+            display:flex;
+            flex-direction:column;
+            width:30%;
+        }
+        .inputs{
+            display:flex;
+            justify-content:space-evenly;
+        }
+        .btn{
+            margin-top:5px;
+        }
+    </style>
+</head>
+<body>
+    <form id="createTblForm">
+        <div class="inputs">
+            <div>
+                <label for="name">Rows:</label>
+                <input type="number" name="rows" min="1" max="15"/>
+            </div>
+            <div>
+                <label for="name">Columns:</label>
+                <input type="number" name="columns" min="1" max="15"/>
+            </div>
+        </div>
+        <input type="submit" class="btn" value="Create New Table"/>
+    </form>
+    <table id="myTable"></table>
+</body>
+</html>
