@@ -3,11 +3,13 @@ document.addEventListener('DOMContentLoaded',()=>{
         {
             title:"The Design of Everyday Things",
             author:"Don Norman",
+            cover:'http://lorempixel.com/150/200/nature',
             alreadyRead:false
         },
         {
             title:"The Most Human Human",
             author:"Brian Christian",
+            cover:'http://lorempixel.com/150/200/people',
             alreadyRead:true
         }
     ];
@@ -21,15 +23,15 @@ document.addEventListener('DOMContentLoaded',()=>{
         bookAuthor.innerHTML = books[i].author;
         let alreadyRead = document.createElement('li');
         alreadyRead.innerHTML = books[i].alreadyRead;
-        //console.log(bookTitle,bookAuthor,alreadyRead);
-
-        let bookItem = document.createElement('p');
+        let bookCover = document.createElement('img');
+        bookCover.src = books[i].cover;
+        let bookItem = document.createElement('div');
         bookDetails.appendChild(bookAuthor);
         bookDetails.appendChild(alreadyRead);
         bookTitle.appendChild(bookDetails);
         bookItem.appendChild(bookTitle);
+        bookItem.appendChild(bookCover);
         list.appendChild(bookItem);
     }
-
     document.body.appendChild(list);
 })
