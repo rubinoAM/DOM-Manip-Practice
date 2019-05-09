@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>jQuery- Ex.6</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="six.js"></script>
+    <style>
+        p#animatePara{
+            background:#b0e0e6;
+            width:70px;
+            border:1px cadetblue solid;
+            /* animation-name:animatePara; */
+            animation-duration:0.5s;
+        }
+
+        @keyframes animatePara{
+            0%{
+                opacity:1;
+                margin-left:0;
+                width:70px;
+                border-width:1px;
+                font-size:1rem;
+            }
+            50%{
+                opacity:0.4;
+                margin-left:0.6rem;
+                width:70%;
+                border-width:10px;
+                font-size:3rem;
+            }
+            100%{
+                opacity:1;
+                margin-left:0;
+                width:70px;
+                border-width:1px;
+                font-size:1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p id="animatePara">Lorem ipsum dolor sit amet.</p>
+    <button id="btn">Animate it!</button>
+</body>
+</html>
